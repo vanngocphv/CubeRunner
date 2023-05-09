@@ -9,10 +9,16 @@ public class GameSreenUI : MonoBehaviour
 
     private void Start(){
         CheckPoint.Instance.OnCurrentPointChange += OnPointChange;
+        GameOverUI.Instance.OnRetryEvent += OnRetry;
         pointCount.text = "0";
     }
 
     private void OnPointChange(object sender, System.EventArgs e){
         pointCount.text = CheckPoint.Instance.GetCurrentPoint().ToString();
     }
+
+    private void OnRetry(object sender, System.EventArgs e){
+        pointCount.text = "0";
+    }
+
 }
