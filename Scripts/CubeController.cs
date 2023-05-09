@@ -46,7 +46,7 @@ public class CubeController : MonoBehaviour
         
     }
     private void SetupJumpValue(){
-        jumpPow = - jumpHeight / maxJumpTime / gravityPow * 1.7f;
+        jumpPow = - jumpHeight / maxJumpTime / gravityPow * 1.5f;
         Debug.Log(jumpPow);
     }
 
@@ -61,7 +61,7 @@ public class CubeController : MonoBehaviour
         }
 
         if (!characterController.isGrounded){
-            currentMovement.y += gravityPow / jumpHeight;
+            currentMovement.y += gravityPow / jumpHeight / 2f;
         }
     }
 

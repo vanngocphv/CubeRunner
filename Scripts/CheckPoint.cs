@@ -12,6 +12,9 @@ public class CheckPoint : MonoBehaviour
     private void Awake() {
         Instance = this;
     }
+    private void Start(){
+        GameOverUI.Instance.OnRetryEvent += OnRetryEvent;
+    }
 
     private void OnTriggerEnter(Collider other) {
         if (!CubeController.Instance.GetIsOver()){
@@ -23,5 +26,9 @@ public class CheckPoint : MonoBehaviour
     
     public int GetCurrentPoint(){
         return currentPoint;
+    }
+
+    private void OnRetryEvent(object sender, System.EventArgs e){
+        currentPoint = 0;
     }
 }
