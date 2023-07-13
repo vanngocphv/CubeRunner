@@ -16,4 +16,4 @@ Creator: NgocPHV <br />
 - Asset: Polygon Starter
 
 # Demo
-![Gameplay demo](./Gif/Gameplay.gif)
+![Gameplay demo](./Gif/CubeEndlessRun_Demo.gif)
